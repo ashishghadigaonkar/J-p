@@ -1,0 +1,50 @@
+Step 1 : Check your jdk version and maven version
+	>echo %JAVA_HOME%
+
+	>java -version
+	
+	>mvn -version
+step 2 : Login jenins and go to (manage Jenkins > tool)
+
+	set the jdk path and Jenkins
+	> JDK installations
+		add JDK
+			Name : JAVA_HOME
+			JAVA_HOME: <Path of jdk file>
+
+	>Maven installation
+		add maven
+			Name : MAVEN_HOME
+			MAVEN_HOME: c:\apache-maven-3.9.9 -Path of maven
+
+	click on save
+
+step 3 : Click on Manage Jenkins >Plugins
+	and check "TestNG" install or not
+
+
+step 4 : Create a new "freestyle project"
+
+step 5 : select "use custome workspace" provide the full pth of directory
+		add the file or download which given by madam on classroom
+
+step 6 :
+	In the "Build Steps Section" select "Invoke top level Maven Target"
+	>Maven version
+		MAVEN_HOME
+	>Goals
+		clean test
+
+step 7:
+	click on advanced
+	provide the full path of pom.xml which present in folder
+
+
+step 8: 
+	IN post build actions
+	Enter the Result path as "**/target/surfire-reports/*.xml"
+
+step 9 : build now
+
+step 10 : checl folder
+
