@@ -2,10 +2,10 @@
 
 Trigger build remotely :
 pipeline sscript :
-      pipeline {
-    agent any
 
-    stages {
+pipeline {
+    agent any
+      stages {
         stage('Author name') {
             steps {
                 echo 'This job is done by ${params.whoami}'
@@ -21,3 +21,5 @@ pipeline sscript :
         }
     }
 }
+
+URL : http://localhost:8080/buildByToken/buildWithParameters?token=54321&job=<your_job_name>whoami=ashish&filename=test.txt
