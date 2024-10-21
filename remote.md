@@ -20,10 +20,12 @@ Developer Role:
 Select the following permissions:
 Job: Create, Delete, Build, Configure, Workspace
 View: Read
+
 QA Engineer Role:
 Select the following permissions:
 Job: Build, Read, Workspace
 View: Read
+
 Project Manager Role:
 Select only these permissions:
 Job: Read
